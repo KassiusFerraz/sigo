@@ -25,7 +25,7 @@ builder.Services.Configure<JsonOptions>(options =>
     options.SerializerOptions.IncludeFields = true;
     options.SerializerOptions.Converters.Add(new JsonStringEnumConverter(null, false));
 });
-builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer("Server=tcp:sigo-dbserver.database.windows.net,1433;Initial Catalog=sigo-norma-api_db;Persist Security Info=False;User ID=kassius;Password=p4t0s@azure;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"));
+builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(""));
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
